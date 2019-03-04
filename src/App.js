@@ -51,6 +51,7 @@ class App extends Component {
     error: ""
   }
 
+
   renderListView() {
     this.setState({ data: [] })
     let main_array = [];
@@ -91,7 +92,7 @@ class App extends Component {
         <input type="text" id="myInput" className="input"
           placeholder="Search for book.." value={this.state.inputValue}
           onKeyPress={(event) => {
-            if (event.key == 'Enter')
+            if (event.key === 'Enter')
               this.renderListView()
           }}
           onChange={(evt) => {
